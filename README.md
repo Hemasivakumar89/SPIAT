@@ -1,6 +1,22 @@
-runtime.txt
-install.R
-install.packages(c("Seurat", "SeuratData", "dplyr", "patchwork", "ggplot2"))
-if (!requireNamespace("BiocManager", quietly = TRUE))
-    install.packages("BiocManager")
-BiocManager::install("SPIAT")
+name: base
+Channels:
+- conda-forge
+- bioconda
+- defaults
+dependencies:
+  - python=3.9
+  - r-base=4.0
+  - r-dplyr
+  - r-ggplot2
+  - r-reshape2
+  - r-tidyverse
+  - r-plotly
+  - r-stringr
+  - r-jsonlite
+  - pip
+  - pip:
+    - plotly
+    - pandas
+    - matplotlib
+    - scikit-learn
+    - numpy
